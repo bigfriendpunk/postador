@@ -1,0 +1,35 @@
+oid_section = new_oids #Remove this field if you are generating this on a Linux OS
+
+[ new_oids ] #Remove this field if you are generating this on a Linux OS
+organizationIdentifier = 2.5.4.97 #Remove this field if you are generating this on a Linux OS
+
+  
+[req]
+default_bits = 2048
+default_md = sha256
+encrypt_key = yes
+prompt = no
+string_mask = nombstr
+distinguished_name = client_distinguished_name
+req_extensions = req_cert_extensions
+
+[ client_distinguished_name ]
+businessCategory = Business Entity
+jurisdictionCountryName = BR
+serialNumber = 03209092000102
+countryName = BR
+organizationName = SANTANDER CAPITALIZACAO S.A.
+stateOrProvinceName = SP
+localityName = SAO PAULO
+organizationIdentifier = OPIBR-83561fbf-f05b-429d-81c7-b066561be813
+UID = 45f5be64-b231-463c-bf91-4790fc922e52
+commonName = Santander Capitalização S.A
+
+[ req_cert_extensions ]
+basicConstraints = CA:FALSE
+subjectAltName = @alt_name
+keyUsage = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = clientAuth
+
+[ alt_name ]
+DNS = www.santander.com.br
